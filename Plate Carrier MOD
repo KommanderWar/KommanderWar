@@ -1,0 +1,81 @@
+class CfgPatches
+{
+    class AMIGOS_PLATE_CARRIER
+    {
+        units[]={};
+        weapons[]={};
+        requiredVersion=0.1;
+        requiredAddons[]=
+        {
+            "DZ_Characters",
+			"DZ_Characters_Tops",
+			"DZ_Characters_Vests",
+			"DZ_Gear_Containers",
+			"DZ_Data"
+        };
+    };
+};
+class cfgVehicles
+{
+    class Clothing_Base;
+	class Container_Base;
+	class PlateCarrierVest;
+	class PlateCarrierPouches;
+	class PlateCarrierHolster;
+	class NylonKnifeSheath;
+//abaixo pode apagar ;-; n deu certo, o resto todas as texturas são só na do plate, só 1 textura pra os 3 itens
+	class Amigos_nylon_knifesheath_Black: NylonKnifeSheath
+	{	scope=2;
+		displayName="BAINHA PARA FACA DayZAMIGOS";
+		descriptionShort="Bainha para faca Preta DayZ Amigos Vests.";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[]=
+		{
+			"AMIGOS_PLATE_CARRIER\data\Amigos_nylon_knifesheath_Black.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_nylon_knifesheath_Black.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_nylon_knifesheath_Black.paa"
+		};
+	};
+	class Amigos_Plate_Carrier: PlateCarrierVest
+	{	scope = 2;
+		displayName = "Colete Porta Placas Preto DayZAMIGOS";
+		descriptionShort = "Colete Porta Placas Preto do servidor Amigos.";
+		weight=10000;
+		itemsSize[] = {4,4.};
+		hiddenSelections[] = {"camoGround","camoMale","camoFemale"};
+		hiddenSelectionsTextures[] = 
+		{
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa"
+		};
+	};
+	class Amigos_Holster_Black: PlateCarrierHolster
+	{
+		displayName = "Coldre Preto para pisolas";
+		descriptionShort = "Coldre Preto pode ser acoplada ao Colete Porta Placas ou ao cinto.";
+		scope = 2;
+		hiddenSelections[] = {"camoGround","zbytek"};
+		hiddenSelectionsTextures[]=
+		{
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa"
+		};
+	};
+	class Amigos_Pounches_BLACK: PlateCarrierPouches
+	{	scope = 2;
+		displayName = "Bolsa de Recursos Preta";
+		descriptionShort = "Bolsa de Recursos Preta, Pode ser Acoplaca ao Colete Porta Placas.";
+		itemsSize[] = {4,3};
+		itemsCargoSize[] = {7,4};
+		visibilityModifier = 0.1;
+		hiddenSelections[] = {"camoground","zbytek"};
+		hiddenSelectionsTextures[] = 
+		{
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa",
+			"AMIGOS_PLATE_CARRIER\data\Amigos_Plate_Carrier.paa"
+		};
+	};
+};
